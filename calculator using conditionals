@@ -1,72 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Calculator</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
 <body>
     <center>
-    <div style = "width: 500px; height: 500px; background-color: rgb(137, 174, 230); border: 10px solid rgb(187, 192, 240);">
-    <div style = "display: flex; width: 500px; height: 50px; background-color: rgb(21, 30, 111);">
-        
-        <input type = "text" id = "input1" style = "width: 250%; height: 40px; border: 1cap solid rgb(21, 30, 111)";>
-        <input type = "text" id = "input2" style = "width: 250%; height: 40px; border: 1cap solid rgb(21, 30, 111)";>
-    </div>
-    <input type = "text" id = "ans" style = "height: 40px; margin-bottom: 10px;margin-top: 20px; border: 2px solid rgb(67, 47, 122); background-color: rgb(233, 210, 255);";>
-    
-    <div style = "display: flex; width: 500px; height: 75px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
-    <button onclick =" Calculator('+')" style="width: 20%; position: absolute; top: 22%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">+</button>
-    </div>
-    <div style = "display: flex; width: 500px; height: 75px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
-    <button onclick = "Calculator('-')"style ="width: 20%; position: absolute; top: 33%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">-</button>
-    </div>
-    <div style = "display: flex; width: 500px; height: 75px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
-    <button onclick = "Calculator('*')" style ="width: 20%; position: absolute;top: 44%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">*</button>
-    </div>
-    <div style = "display: flex; width: 500px; height: 85px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
-    <button onclick = "Calculator('/')" style ="width: 20%; position: absolute; top: 55%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">/</button>
-    
-</div>
-    </div>
-    </div>
-
-    <script>
-        function Calculator(sym){
-            let a = parseInt(document.getElementById("input1").value)
-            let b = parseInt(document.getElementById("input2").value)
-            if (sym == "+")
-            {
-            let addition = a+b;
-            document.getElementById("ans").value = addition
-            }
-            else if(sym == "-")
-            {
-           
-            let subraction = a-b;
-            document.getElementById("ans").value = subraction
-   
-            }
-            else if(sym == "*")
-            {
+        <div style="width: 300px; resize: both; overflow: auto; margin-top: 50px; background: linear-gradient(to right, #ccf5bc, #3ac3c3); border: 2px solid #184a26cc; border-radius: 5px; padding: 25px;">
+            <div style = "display: flex; justify-content: space-evenly;margin-top: 15px;margin-bottom: 10px; width:calc(100% - 10px);padding: 5px; height: 60px;">
+            <input type="text" id="input1" style="width: calc(100% - 5px);box-shadow: 1px 2px 2px #45d189;;margin-right: 30px; margin-bottom: 10px; height: 50px; border-radius: 3px; padding: 1px; font-size: 16px; box-sizing: border-box;">
+            <input type="text" id="input2" style="width: calc(100% - 5px); box-shadow: 1px 1.5px 2px #a6f0f0;margin-bottom: 10px; height: 50px; border-radius: 3px; padding: 1px; font-size: 16px; box-sizing: border-box;">
+        </div>
+            <input type="text" id="ans" style="width: calc(100% - 10px); width: 150px;height: 10px;background: rgb(185, 204, 203);margin-bottom: 10px; border: #000000;box-shadow: 5px 1px 1px 1px #45d189; background-color: rgb(208, 253, 204); height: 40px; border-radius: 20px 1px 20px 1px; padding: 5px; font-size: 16px; box-sizing: border-box;">
+            <div style="display: flex; justify-content: space-evenly; margin-top: 20px;">
+                <button onclick="Calculator('+')" style="width: calc(35% - 1px); text-shadow: 2px 2px 4px #000000 ;text-align: center; height: 50px; border-radius: 46pt; background-color: #289e71; color: rgb(194, 240, 211); font-size: 30px;font-weight: 550; background: linear-gradient(to right, rgb(85, 161, 136), #0f8265);border: 2px solid rgb(80, 129, 112);">+</button><br>
+                <button onclick="Calculator('-')" style="width: calc(35% - 1px); text-shadow: 2px 2px 4px #000000; border-radius: 46pt; background-color: #289e71; color: rgb(194, 240, 211); font-size: 30px; font-weight: 550; background: linear-gradient(to left, rgb(85, 161, 136), #0f8265);border: 2px solid rgb(80, 129, 112)">-</button><br>  
+            </div>
+                <div style="display: flex; justify-content: space-evenly; margin-top: 30px;">
+                <button onclick="Calculator('*')" style="width: calc(35% - 1px); text-shadow: 2px 2px 4px #000000;text-align: center; height: 50px; border-radius: 46pt; background-color: #289e71; color: rgb(194, 240, 211); font-size: 29px;font-weight: 550; background: linear-gradient(to left, rgb(85, 161, 136), #0f8265); text-align: center; border: 2px solid rgb(80, 129, 112);">x</button><br>
+                <button onclick="Calculator('/')" style="width: calc(35% - 1px); text-shadow: 2px 2px 4px #000000;height: 50px; border-radius: 46pt; background-color: #289e71; color: rgb(194, 240, 211); font-size: 25px;font-weight: 550; background: linear-gradient(to right, rgb(85, 161, 136), #0f8265); border: 2px solid rgb(80, 129, 112);">/</button><br>
             
-            let multiplication = a*b;
-            document.getElementById("ans").value = multiplication
-
-            }
-            else if(sym == "/")
-            {
+            </div>
             
-            let division = a/b;
-            document.getElementById("ans").value = division
+        </div>
+
+        <script>
+            function Calculator(sym){
+                let a = parseInt(document.getElementById("input1").value)
+                let b = parseInt(document.getElementById("input2").value)
+                if (sym == "+") {
+                    document.getElementById("ans").value = a + b;
+                } else if(sym == "-") {
+                    document.getElementById("ans").value = a - b;
+                } else if(sym == "*") {
+                    document.getElementById("ans").value = a * b;
+                } else if(sym == "/") {
+                    document.getElementById("ans").value = a / b;
+                }
             }
-        }
-
-       
-        
-        
-    </script>
-
-    
-</center>
-    
+        </script>
+    </center>
 </body>
 </html>
