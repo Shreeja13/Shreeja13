@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+    </head>
+<body>
+    <center>
+    <div style = "width: 500px; height: 500px; background-color: rgb(137, 174, 230); border: 10px solid rgb(187, 192, 240);">
+    <div style = "display: flex; width: 500px; height: 50px; background-color: rgb(21, 30, 111);">
+        
+        <input type = "text" id = "input1" style = "width: 250%; height: 40px; border: 1cap solid rgb(21, 30, 111)";>
+        <input type = "text" id = "input2" style = "width: 250%; height: 40px; border: 1cap solid rgb(21, 30, 111)";>
+    </div>
+    <input type = "text" id = "ans" style = "height: 40px; margin-bottom: 10px;margin-top: 20px; border: 2px solid rgb(67, 47, 122); background-color: rgb(233, 210, 255);";>
+    
+    <div style = "display: flex; width: 500px; height: 75px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
+    <button onclick = "add()" style="width: 20%; position: absolute; top: 22%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">+</button>
+    </div>
+    <div style = "display: flex; width: 500px; height: 75px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
+    <button onclick = "sub()"style ="width: 20%; position: absolute; top: 33%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">-</button>
+    </div>
+    <div style = "display: flex; width: 500px; height: 75px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
+    <button onclick = "mul()" style ="width: 20%; position: absolute;top: 44%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">*</button>
+    </div>
+    <div style = "display: flex; width: 500px; height: 85px; justify-content: center; align-items: center; background-color: rgb(137, 174, 230);">
+    <button onclick = "div()" style ="width: 20%; position: absolute; top: 55%; background-color: rgb(194, 166, 221); font-weight: bold; border: 3px solid rgb(21, 30, 111); font-family:Arial,'Arial Narrow Bold'; font-size: larger;">/</button>
+    
+</div>
+    </div>
+    </div>
+
+    <script>
+        function add(){
+            let a = parseInt(document.getElementById("input1").value)
+            let b = parseInt(document.getElementById("input2").value)
+            let addition = a+b;
+            document.getElementById("ans").value = addition
+
+        }
+
+        function sub(){
+            let a = parseInt(document.getElementById("input1").value)
+            let b = parseInt(document.getElementById("input2").value)
+            let subraction = a-b;
+            document.getElementById("ans").value = subraction
+
+        }
+
+        function mul(){
+            let a = parseInt(document.getElementById("input1").value)
+            let b = parseInt(document.getElementById("input2").value)
+            let multiplication = a*b;
+            document.getElementById("ans").value = multiplication
+
+        }
+
+        function div(){
+            let a = parseInt(document.getElementById("input1").value)
+            let b = parseInt(document.getElementById("input2").value)
+            let division = a/b;
+            document.getElementById("ans").value = division
+
+        }
+        
+        
+    </script>
+
+    
+</center>
+    
+</body>
+</html>
